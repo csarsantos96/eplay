@@ -1,17 +1,37 @@
 import Tag from '../Tag'
 
-import { Card, Descricao, Titulo } from './styles'
+import { Card, Descricao, Infos, Titulo } from './styles'
 
-const Product = () => (
+type Props = {
+  title: string
+  category: string
+  system: string
+  description: string
+  infos: string[]
+  image: string
+}
+
+const Product = ({
+  title,
+  category,
+  system,
+  description,
+  infos,
+  image
+}: Props) => (
   <Card>
-    <img src="//placehold.it/222x250" />
-    <Titulo>Nome do Jogo</Titulo>
-    <Tag size={'small'}>Categoria</Tag>
-    <Tag size={'small'}>Windows</Tag>
-    <Descricao>
-      Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico
-      de survival horror..
-    </Descricao>
+    <img src={image} alt={title} />
+    <Infos>
+      {infos.map((info) => (
+        <Tag key={info} size={'small'}>
+          {info}
+        </Tag>
+      ))}
+    </Infos>
+    <Titulo>{title}</Titulo>
+    <Tag size={'small'}>{category}</Tag>
+    <Tag size={'small'}>{system}</Tag>
+    <Descricao>{description}</Descricao>
   </Card>
 )
 
