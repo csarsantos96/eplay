@@ -45,10 +45,14 @@ export const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  z-index:1;
-  display: flex;
+  z-index: 1;
+  display: none;
   align-items: center;
   justify-content: center;
+
+  &.visivel {
+    display: flex;
+  }
 
   .overlay {
     position: absolute;
@@ -57,33 +61,34 @@ export const Modal = styled.div`
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.73);
-
+    cursor: pointer;
+  }
 `
 
 export const ModalContent = styled.div`
   max-width: 960px;
   position: relative;
-  z-index:1;
+  z-index: 1;
 
   header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
 
-    h4{
-    font-size: 18px;
-    font-weight: bold
+    h4 {
+      font-size: 18px;
+      font-weight: bold;
     }
   }
 
-
-
-
-  img {
+  img,
+  iframe {
     display: block;
     max-width: 100%;
   }
 
-
+  iframe {
+    width: 100%;
+    height: 480px;
   }
 `
