@@ -9,14 +9,14 @@ export type Props = {
   games: Game[]
 }
 
-const ProductsList = ({ background, title, games }: Props) => {
-  const formataPreco = (preco: number) => {
-    new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL'
-    }).format(preco)
-  }
+export const formataPreco = (preco = 0): string => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
+}
 
+const ProductsList = ({ background, title, games }: Props) => {
   const getGameTags = (game: Game) => {
     const tags = []
 

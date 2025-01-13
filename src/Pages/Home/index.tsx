@@ -3,11 +3,6 @@ import { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
 
-import resident from '../../assets/images/resident.png'
-import diablo from '../../assets/images/diablo.png'
-import zelda from '../../assets/images/zelda.png'
-import starwars from '../../assets/images/star_wars.png'
-
 export interface GalleryItem {
   type: 'image' | 'video'
   url: string
@@ -44,6 +39,10 @@ const Home = () => {
     fetch('https://fake-api-tau.vercel.app/api/eplay/promocoes')
       .then((res) => res.json())
       .then((res) => setPromocoes(res))
+
+    fetch('https://fake-api-tau.vercel.app/api/eplay/em-breve')
+      .then((res) => res.json())
+      .then((res) => setEmBreve(res))
   }, [])
 
   return (
