@@ -1,5 +1,16 @@
 import Button from '../Button'
-import { OverLay, CartContainer, Sidebar } from './styles'
+
+import starWars from '../../assets/images/star_wars.png'
+
+import {
+  OverLay,
+  CartContainer,
+  Sidebar,
+  Prices,
+  Quantity,
+  CartItem
+} from './styles'
+import Tag from '../Tag'
 
 const Cart = () => (
   <CartContainer>
@@ -7,13 +18,19 @@ const Cart = () => (
     <Sidebar>
       <ul>
         <li>
-          <h3>Nome do Jogo</h3>
+          <img src={starWars} alt="star wars banner" />
+          <div>
+            <h3>Nome do Jogo</h3>
+            <Tag size={'small'}>RPG</Tag>
+            <Tag size={'small'}>ps5</Tag>
+            <span>R$ 150,00</span>
+          </div>
         </li>
       </ul>
-      <p> 2 jogo(s) no carrinho</p>
-      <p>
+      <Quantity> 2 jogo(s) no carrinho</Quantity>
+      <Prices>
         Total de R$ 250,00 <span>Em até 6x sem juros</span>
-      </p>
+      </Prices>
       <Button title="Clique aqui para continuar com a compra" type="button">
         Continuar com a compra
       </Button>
