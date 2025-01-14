@@ -17,7 +17,7 @@ const Cart = () => (
     <OverLay />
     <Sidebar>
       <ul>
-        <li>
+        <CartItem>
           <img src={starWars} alt="star wars banner" />
           <div>
             <h3>Nome do Jogo</h3>
@@ -25,7 +25,16 @@ const Cart = () => (
             <Tag size={'small'}>ps5</Tag>
             <span>R$ 150,00</span>
           </div>
-        </li>
+        </CartItem>
+        <CartItem>
+          <img src={starWars} alt="star wars banner" />
+          <div>
+            <h3>Nome do Jogo</h3>
+            <Tag size={'small'}>RPG</Tag>
+            <Tag size={'small'}>ps5</Tag>
+            <span>R$ 150,00</span>
+          </div>
+        </CartItem>
       </ul>
       <Quantity> 2 jogo(s) no carrinho</Quantity>
       <Prices>

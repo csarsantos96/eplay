@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { Cores } from '../../styles'
+import { TagContainer } from '../Tag/styled'
+import { ButtonContainer } from '../Button/styles'
 
 export const OverLay = styled.div`
   position: absolute;
@@ -26,6 +28,13 @@ export const Sidebar = styled.aside`
   background-color: ${Cores.cinza};
   z-index: 1;
   padding: 40px 16px 0;
+  max-width: 360px;
+  width: 100%;
+
+  ${ButtonContainer} {
+    max-width: 100%;
+    width: 100%;
+  }
 `
 
 export const Prices = styled.p`
@@ -56,8 +65,24 @@ export const CartItem = styled.li`
     width: 80px;
     height: 80px;
     object-fit: cover;
+    margin-right: 24px;
+  }
+  h3 {
+    color: ${Cores.branca};
+    font-weight: bold;
+    font-size: 16px;
   }
 
-  div {
+  span {
+    display: block;
+    color: ${Cores.branca};
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  ${TagContainer} {
+    margin-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 16px;
   }
 `
