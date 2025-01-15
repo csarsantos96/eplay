@@ -3,6 +3,8 @@ import { Cores } from '../../styles'
 import { TagContainer } from '../Tag/styled'
 import { ButtonContainer } from '../Button/styles'
 
+import fechar from '../../assets/images/fechar.png'
+
 export const OverLay = styled.div`
   position: absolute;
   top: 0;
@@ -60,6 +62,9 @@ export const Quantity = styled.p`
 
 export const CartItem = styled.li`
   display: flex;
+  border-bottom: 1px solid ${Cores.cinzaClaro};
+  padding: 8px 0;
+  position: relative;
 
   img {
     width: 80px;
@@ -84,5 +89,16 @@ export const CartItem = styled.li`
     margin-right: 8px;
     margin-top: 8px;
     margin-bottom: 16px;
+  }
+
+  button {
+    background-image: url(${fechar});
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 8px;
+    right: 0;
   }
 `

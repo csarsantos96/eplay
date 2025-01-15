@@ -25,6 +25,7 @@ const Cart = () => (
             <Tag size={'small'}>ps5</Tag>
             <span>R$ 150,00</span>
           </div>
+          <button type="button" />
         </CartItem>
         <CartItem>
           <img src={starWars} alt="star wars banner" />
@@ -34,6 +35,7 @@ const Cart = () => (
             <Tag size={'small'}>ps5</Tag>
             <span>R$ 150,00</span>
           </div>
+          <button type="button" />
         </CartItem>
       </ul>
       <Quantity> 2 jogo(s) no carrinho</Quantity>
